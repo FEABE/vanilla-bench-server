@@ -62,6 +62,6 @@ test('외부 라이브러리 없음: three.js 를 쓰지 않고, 페이지는 �
     assert.equal(fs.existsSync(path.join(WEB, 'js', 'three.min.js')), false);
     const html = fs.readFileSync(path.join(WEB, 'index.html'), 'utf8');
     const scripts = Array.from(html.matchAll(/<script src="([^"]+)"/g)).map((m) => m[1]);
-    assert.deepEqual(scripts, ['/js/http.js', 'js/core.js', 'js/lib/minify.js', 'js/lib/mangle.js', 'js/lib/diff.js', 'js/tests.js', 'js/gfx/effects-2d.js', 'js/gfx/effects-gl.js', 'js/gfx/effects-gpu.js', 'js/gfx/effects-web.js', 'js/gfx/engine.js', 'js/app.js']);
+    assert.deepEqual(scripts, ['/js/http.js', 'js/core.js', 'js/lib/minify.js', 'js/lib/mangle.js', 'js/lib/diff.js', 'js/tests.js', 'js/gfx/effects-2d.js', 'js/gfx/effects-gl.js', 'js/gfx/effects-gpu.js', 'js/gfx/effects-web.js', 'js/gfx/effects-2d-more.js', 'js/gfx/effects-gl-more.js', 'js/gfx/effects-gpu-more.js', 'js/gfx/effects-web-more.js', 'js/gfx/engine.js', 'js/app.js']);
     assert.doesNotMatch(html, /https?:\/\/[^"]*\.js/);
 });
